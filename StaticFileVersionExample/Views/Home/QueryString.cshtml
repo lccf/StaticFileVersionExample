@@ -5,8 +5,8 @@
     var CDNVersion = @WebConfigurationManager.AppSettings["CDNVersion"];
 }
 @section Styles {
-    <link rel="stylesheet" href="@Url.Content("~/Content/bootstrap.css")?CV=@CDNVersion">
-    <link rel="stylesheet" href="@Url.Content("~/Content/site.css")?CV=@CDNVersion">
+    <link rel="stylesheet" href="@Url.Content("~/Content/css/bootstrap.css")?CV=@CDNVersion">
+    <link rel="stylesheet" href="@Url.Content("~/Content/css/site.css")?CV=@CDNVersion">
 }
 <div class="container">
 <h3>页面中引用的文件添加版本号</h3>
@@ -35,5 +35,5 @@ $CDNVersion: "20160202";
     background-image: img-url("logo.png");
 }
 </pre>
-<p>具体代码见Content/Site.scss，结果见<a href="@Url.Content("~/Content/Site.css")">Content/Site.css</a></p>
+<p>具体代码见Content/css/Site.scss，结果见<a href="@Url.Content("~/Content/css/Site.css")">Content/css/Site.css</a></p>
 </div>
