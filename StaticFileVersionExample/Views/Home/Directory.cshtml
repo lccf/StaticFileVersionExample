@@ -1,0 +1,35 @@
+﻿@using System.Web.Configuration
+@{
+    ViewBag.Title = "QueryString";
+    Layout = "~/Views/Shared/_PageLayout.cshtml";
+    var CDNVersion = @WebConfigurationManager.AppSettings["CDNVersion"];
+}
+@section Styles {
+    <link rel="stylesheet" href="@Url.Content(String.Format("~/Content/{0}/css/bootstrap.css", CDNVersion))">
+    <link rel="stylesheet" href="@Url.Content(String.Format("~/Content/{0}/css/site.css",CDNVersion))">
+}
+<div class="container">
+    <h3>页面中引用的文件添加版本号</h3>
+    <p>查询参数形式版本号通过在应用程序中指定配置项，访问静态文件时拼接到路径后实现。</p>
+<pre>
+@@using System.Web.Configuration
+@@{
+    var CDNVersion = @@WebConfigurationManager.AppSettings["CDNVersion"];
+}
+&lt;link rel="stylesheet" href="@@Url.Content(String.Format("~/Content/{0}/css/site.css",CDNVersion))"&gt;
+</pre>
+    <p>具体代码见Views/Home/Directory.cshtml文件</p>
+    <h3>js中获取版本号</h3>
+<pre>
+&lt;script&gt;
+  var CDNVersion = "@@CDNVersion";
+&lt;/script&gt;
+</pre>
+    <h3>css中引用的图片添加版本号</h3>
+    <p>使用相对路径即可</p>
+<pre>
+.test {
+    background-image: url('../img/logo.png');
+}
+</pre>
+</div>

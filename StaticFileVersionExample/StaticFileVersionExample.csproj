@@ -172,11 +172,32 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\20160202\css\bootstrap.css" />
+    <Content Include="Content\20160202\css\bootstrap.min.css" />
+    <Content Include="Content\20160202\css\Site.css" />
+    <Content Include="Content\20160202\img\logo.png" />
+    <Content Include="Content\20160202\js\bootstrap.js" />
+    <Content Include="Content\20160202\js\bootstrap.min.js" />
+    <None Include="Content\20160202\js\jquery-1.10.2.intellisense.js" />
+    <Content Include="Content\20160202\js\jquery-1.10.2.js" />
+    <Content Include="Content\20160202\js\jquery-1.10.2.min.js" />
+    <None Include="Content\20160202\js\jquery.validate-vsdoc.js" />
+    <Content Include="Content\20160202\js\jquery.validate.js" />
+    <Content Include="Content\20160202\js\jquery.validate.min.js" />
+    <Content Include="Content\20160202\js\jquery.validate.unobtrusive.js" />
+    <Content Include="Content\20160202\js\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Content\20160202\js\modernizr-2.6.2.js" />
+    <Content Include="Content\20160202\js\respond.js" />
+    <Content Include="Content\20160202\js\respond.min.js" />
+    <None Include="Content\20160202\js\_references.js" />
     <Content Include="Content\css\bootstrap.css" />
     <Content Include="Content\css\bootstrap.min.css" />
     <Content Include="Content\css\Site.css" />
+    <Content Include="Content\img\logo.png" />
     <Content Include="Content\js\bootstrap.js" />
     <Content Include="Content\js\bootstrap.min.js" />
+    <Content Include="Content\20160202\css\Site.scss" />
+    <Content Include="Content\20160202\js\jquery-1.10.2.min.map" />
     <None Include="Content\js\jquery-1.10.2.intellisense.js" />
     <Content Include="Content\js\jquery-1.10.2.js" />
     <Content Include="Content\js\jquery-1.10.2.min.js" />
@@ -248,6 +269,7 @@
     <Content Include="Views\Shared\_PageLayout.cshtml" />
     <Content Include="Views\Home\QueryString.cshtml" />
     <Content Include="Views\Home\FileName.cshtml" />
+    <Content Include="Views\Home\Directory.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -258,6 +280,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
+    <Content Include="Content\server-manifest.json" />
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <PropertyGroup>
