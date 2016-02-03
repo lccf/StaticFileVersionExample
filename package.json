@@ -1,0 +1,19 @@
+{
+  "name": "StaticFileVersionExample",
+  "version": "1.0.0",
+  "description": "静态资源文件版本号示例",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@code.huazhu.com:chenglifu/StaticFileVersionExample.git"
+  },
+  "author": "chenglifu",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-rev-all": "^0.8.22"
+  }
+}

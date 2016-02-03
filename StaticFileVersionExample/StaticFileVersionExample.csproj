@@ -40,6 +40,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -103,9 +107,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -174,7 +175,6 @@
     <Content Include="Content\css\bootstrap.css" />
     <Content Include="Content\css\bootstrap.min.css" />
     <Content Include="Content\css\Site.css" />
-    <Content Include="Content\css\Site.min.css" />
     <Content Include="Content\js\bootstrap.js" />
     <Content Include="Content\js\bootstrap.min.js" />
     <None Include="Content\js\jquery-1.10.2.intellisense.js" />
@@ -191,9 +191,26 @@
     <None Include="Content\js\_references.js" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="Content\css\Site.css.map" />
     <Content Include="Content\css\Site.scss" />
     <Content Include="Content\js\jquery-1.10.2.min.map" />
+    <Content Include="Public\css\bootstrap.151a0e79.css" />
+    <Content Include="Public\css\bootstrap.min.02d0e923.css" />
+    <Content Include="Public\css\Site.0449c793.css" />
+    <Content Include="Public\img\logo.eda4f09f.png" />
+    <Content Include="Public\js\bootstrap.003e97bb.js" />
+    <Content Include="Public\js\bootstrap.min.52a2a036.js" />
+    <Content Include="Public\js\jquery-1.10.2.13e47b98.js" />
+    <Content Include="Public\js\jquery-1.10.2.intellisense.8bb84755.js" />
+    <Content Include="Public\js\jquery-1.10.2.min.db0eb3e0.js" />
+    <Content Include="Public\js\jquery.validate-vsdoc.cccea6ee.js" />
+    <Content Include="Public\js\jquery.validate.68255cd1.js" />
+    <Content Include="Public\js\jquery.validate.min.5e1a192d.js" />
+    <Content Include="Public\js\jquery.validate.unobtrusive.c00155f4.js" />
+    <Content Include="Public\js\jquery.validate.unobtrusive.min.cf7123d5.js" />
+    <Content Include="Public\js\modernizr-2.6.2.ec703d0a.js" />
+    <Content Include="Public\js\respond.062abc1f.js" />
+    <Content Include="Public\js\respond.min.41938902.js" />
+    <Content Include="Public\js\_references.77a06128.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -230,6 +247,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_PageLayout.cshtml" />
     <Content Include="Views\Home\QueryString.cshtml" />
+    <Content Include="Views\Home\FileName.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
