@@ -1,16 +1,22 @@
 ﻿@using System.Web.Configuration
 @{
-    ViewBag.Title = "QueryString";
+    ViewBag.Title = "查询参数形式版的本号";
     Layout = "~/Views/Shared/_PageLayout.cshtml";
     var CDNVersion = @WebConfigurationManager.AppSettings["CDNVersion"];
+    var index = 1;
 }
 @section Styles {
     <link rel="stylesheet" href="@Url.Content("~/Content/css/bootstrap.css")?CV=@CDNVersion">
     <link rel="stylesheet" href="@Url.Content("~/Content/css/site.css")?CV=@CDNVersion">
 }
-<div class="container">
-<h3>页面中引用的文件添加版本号</h3>
-<p>查询参数形式版本号通过在应用程序中指定配置项，访问静态文件时拼接到路径后实现。</p>
+<h3>查询参数形式版的本号</h3>
+<h4>@Html.Raw(index++)<text>.配置</text></h4>
+<p>在Web.config文件中appSettings路径下添加版本配置。</p>
+<pre>
+&lt;key="CDNVersion" value="20160202" /&gt;
+</pre>
+<h4>@Html.Raw(index++)<text>.页面中引用的文件添加版本号</text></h4>
+<p>读取配中的版本号，引用静态文件时拼接到查询参数。</p>
 <pre>
 @@using System.Web.Configuration
 @@{
@@ -18,14 +24,16 @@
 }
 &lt;link rel="stylesheet" href="@@Url.Content("~/Content/site.css")?CV=@@CDNVersion"&gt;
 </pre>
-<p>具体代码见Views/Home/QueryString.cshtml文件</p>
-<h3>js中获取版本号</h3>
+<p>具体代码见Views/Home/QueryString.cshtml文件。</p>
+<h4>@Html.Raw(index++)<text>.js中获取版本号</text></h4>
+<p>将配置中的版本号输出到js变量中，在js中加载js，css，image等文件时拼接到查询参数即可。</p>
 <pre>
 &lt;script&gt;
   var CDNVersion = "@@CDNVersion";
 &lt;/script&gt;
 </pre>
-<h3>css中引用的图片添加版本号</h3>
+<h4>@Html.Raw(index++)<text>.css中引用的图片添加版本号</text></h4>
+<p>使用scss定义function实现，VS安装WEB ESSENTIALS可实现保存时自动编译为css(可网上搜索Grant或Gulp解决方案替代)。</p>
 <pre>
 $CDNVersion: "20160202";
 @@function img-url($img, $path: "../img") {
@@ -35,5 +43,7 @@ $CDNVersion: "20160202";
     background-image: img-url("logo.png");
 }
 </pre>
-<p>具体代码见Content/css/Site.scss，结果见<a href="@Url.Content("~/Content/css/Site.css")">Content/css/Site.css</a></p>
-</div>
+<p>具体代码见Content/css/Site.scss，结果见<a href="@Url.Content("~/Content/css/Site.css")">Content/css/Site.css</a>。</p>
+<script>
+    var CDNVersion = "@CDNVersion";
+</script>
