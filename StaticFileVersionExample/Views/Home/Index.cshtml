@@ -1,14 +1,87 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "静态资源版本号示例";
 }
 
+<h3>静态文件版本号的几种形式</h3>
 <div class="row">
-    <h3>静态资源版本号示例</h3>
-    <div class="col-md-3">
-        <ul>
-            <li><a href="@Url.Action("QueryString")">查询参数</a></li>
-            <li><a href="@Url.Action("FileName")">文件名形式</a></li>
-            <li><a href="@Url.Action("Directory")">目录名形式</a></li>
-        </ul>
+    <div class="col-md-6">
+        <div class="panel panel-default">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>类型</th>
+                        <th>形式</th>
+                        <th>&nbsp;</th>
+                    </tr>
+
+                </thead>
+                <tr>
+                    <td>查询参数</td>
+                    <td>/Content/image/logo.png?CV=050607</td>
+                    <td>@Html.ActionLink("点击查看","QueryString")</td>
+                </tr>
+                <tr>
+                    <td>文件名形式</td>
+                    <td>/Content/image/logo. b3047e74.png</td>
+                    <td>@Html.ActionLink("点击查看","FileName")</td>
+                </tr>
+                <tr>
+                    <td>目录名形式</td>
+                    <td>/Content/20160202/image/logo.png</td>
+                    <td>@Html.ActionLink("点击查看","Directory")</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<h3>以下几种场景须添加版本号</h3>
+<div class="row">
+    <div class="col-md-6">
+        <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <!-- Table -->
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>归属-场景/文件</th>
+                        <th>js</th>
+                        <th>css</th>
+                        <th>image</th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>本项目-页面中引用</td>
+                    <td>需添加</td>
+                    <td>需添加</td>
+                    <td>需添加</td>
+                </tr>
+                <tr>
+                    <td>本项目-Js中引用</td>
+                    <td>需添加</td>
+                    <td>需添加</td>
+                    <td>需添加</td>
+                </tr>
+                <tr>
+
+                    <td>本项目-css中引用</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>需添加</td>
+                </tr>
+                <tr>
+
+                    <td>项目外-页面中引用</td>
+                    <td>视情况</td>
+                    <td>视情况</td>
+                    <td>视情况</td>
+                </tr>
+                <tr>
+                    <td>项目外-其它</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </table>
+        </div>
     </div>
 </div>
