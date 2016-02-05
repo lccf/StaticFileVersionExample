@@ -26,6 +26,7 @@ namespace StaticFileVersionExample.Controllers
             string content = System.IO.File.ReadAllText(path);
             JObject manifest = JObject.Parse(content);
             ViewBag.manifest = manifest;
+            ViewBag.manifestContent = content;
             return View();
         }
 
